@@ -30,7 +30,7 @@ Section ***"cache"***:
 - ***"host"*** - host address where the cache service that should be accessed by ***"environmental-fc"*** feature collector is available
 - ***"port"*** - port number where the cache service that should be accessed used by ***"environmental-fc"*** feature collector is available
 
-**Example of the configuration file** ***"price.conf"***:
+**Example of the configuration file** ***"environmental.conf"***:
 ```bash
 [service]
 name = environmental
@@ -49,7 +49,7 @@ port = 6379
 # Usage
 ### Local development (debug on)
 
-The feature collector "environmental-fc" can be launched from the terminal locally by running the script "active.py":
+The feature collector "environmental-fc" can be launched from the terminal locally by running the script "environmental.py":
 
 ```bash
 $ python3 environmental.py
