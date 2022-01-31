@@ -42,13 +42,15 @@ def calculate_co2_total(mode, distance, occupancy = None):
           'carsharing': (190,1.5), 
           'bikesharing': (0, 1)}
 
-    map_tMode = mapping_modes[mode]
+    if mode in mapping_modes:
+        map_tMode = mapping_modes[mode]
 
+        if occupancy is not None:
+            return map_tMode[0]*distance/occupancy
 
-    if occupancy is not None:
-        return map_tMode[0]*distance/occupancy
+        return map_tMode[0]*distance/map_tMode[1]
 
-    return map_tMode[0]*distance/map_tMode[1]
+    return 0
 
 
 def haversine_np(lon1, lat1, lon2, lat2):
