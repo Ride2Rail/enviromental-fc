@@ -85,7 +85,7 @@ def extract():
             #["id","trip","bookable_total","complete_total","offer_items"],
             #["id","duration","start_time", "end_time","num_interchanges","legs"]
             ["num_interchanges"],
-            ["start_time", "end_time","leg_stops","transportation_mode","number_of_persons_sharing_trip", "journey","duration","driver","vehicle","leg_track", "bike_on_board"]
+            ["start_time", "end_time","leg_stops","transportation_mode","number_of_persons_sharing_trip", "journey","duration","leg_track", "bike_on_board"]
             )
     except redis.exceptions.ConnectionError as exc:
         logging.debug("Reading from cache by environmental-fc feature collector failed.")
